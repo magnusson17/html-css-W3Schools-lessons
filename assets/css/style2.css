@@ -1,0 +1,329 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+:root {
+    --aside_percentage: 20%;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    background-color: rgb(210, 201, 201);
+}
+
+aside {
+    width: var(--aside_percentage);
+    /* z-index: 33333; */
+    position: fixed;
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: 100vh;
+    background-color: pink;
+}
+
+.aside_div {
+    padding: 10px 20px;
+}
+
+main {
+    width: 80%;
+    margin-left: var(--aside_percentage);
+}
+
+.card_row {
+    display: flex;
+}
+
+.card_col {
+    margin: 10px;
+    padding: 10px;
+    width: 33%;
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: white;
+}
+
+.card_col_2 {
+    margin: 10px;
+    padding: 10px;
+    width: 66.66%;
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: white;
+}
+
+.card_col_3 {
+    margin: 10px;
+    padding: 10px;
+    width: 100%;
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: white;
+}
+
+.card_title {
+    width: 100%;
+    padding: 10px 0px;
+    text-align: center;
+    background-color: pink;
+    border-radius: 5px;
+}
+
+/* bg */
+.bg_rand_img {
+    background-image: url(https://picsum.photos/id/237/200/300);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    /* the image will keep its original proportions */
+    background-attachment: fixed;
+}
+
+/* btn */
+.btn_base {
+    padding: 10px;
+    background-color: red;
+}
+
+/* link exemple */
+.a_change_exemple:link {
+    color: green;
+}
+
+.a_change_exemple:visited {
+    color: yellow;
+}
+
+.a_change_exemple:hover {
+    color: red;
+    text-decoration: none;
+}
+
+.a_change_exemple:active {
+    color: blue;
+}
+
+/* media query */
+@media screen and (max-width: 800px) {
+    .card_row {
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+    .card_col {
+        width: 40%;
+        /* flex-wrap: wrap; */
+    }
+}
+
+/* table proprieties */
+table,
+th,
+td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+tr:nth-child(even) {
+    background-color: aquamarine;
+}
+
+td:hover {
+    background-color: red;
+}
+
+/* CSS part */
+.bg_c {
+    width: 100%;
+    height: 100px;
+    background-color: red;
+    opacity: 0.5;
+}
+
+.bg_c_1 {
+    width: 100%;
+    height: 100px;
+    background: rgba(22, 33, 44, 0.2);
+}
+
+.bg_img {
+    width: 100%;
+    height: 300px;
+    background-image: url('https://picsum.photos/300/300');
+    background-repeat: repeat;
+    background-attachment: fixed;
+    background-position: center;
+    /* background-size: cover; */
+}
+
+.outline_test {
+    width: 200px;
+    height: 200px;
+    margin-top: 20px;
+    border: 1px solid black;
+    outline: 3px solid red;
+    outline-offset: 50px;
+}
+
+/* text-decoration */
+.txt_dec_test {
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.scroll_ex {
+    border: 1px solid black;
+    width: 500px;
+    height: 100px;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.trans_transl_ex {
+    position: relative;
+    height: 300px;
+    border: 2px solid blue;
+}
+
+.trans_transl_ex p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* float clearifix */
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* sotto liste di css */
+.css_aside_title li {
+    margin-top: 20px;
+}
+
+/* pseudo elements */
+.pseudo_c_ex::before {
+    content: "PRIMA ";
+}
+
+.pseudo_c_ex::after {
+    content: " DOPO";
+}
+
+/* attribute selector */
+.attribut_sel_ex[target="_blank"] {
+    background-color: yellow;
+}
+
+/* navbar */
+:root {
+    --padding-li: 20px;
+}
+
+.nav_test {
+    width: 50%;
+    background-color: green;
+    border: 2px solid black;
+    padding: 0;
+    list-style-type: none;
+}
+
+.nav_test li {
+    float: left;
+    padding: var(--padding-li);
+}
+
+.nav_test li:last-child {
+    float: right;
+}
+
+.nav_test li:hover a {
+    color: green;
+}
+
+.nav_test li:hover {
+    background-color: white;
+}
+
+.nav_test a {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    font-size: 1.5em;
+}
+
+/* dropdown */
+.dropdown_ex {
+    position: relative;
+}
+
+.dropdown_ex:hover {
+    position: relative;
+}
+
+.dropdown_content_ex {
+    position: absolute;
+    border: 2px solid black;
+    display: none;
+    z-index: 1;
+}
+
+.dropdown_ex:hover .dropdown_content_ex {
+    display: block;
+}
+
+.dropdown_content_ex a:hover {
+    color: white!important;
+    background-color: green;
+}
+
+.dropdown_content_ex a {
+    padding: var(--padding-li);
+    display: block;
+    background-color: white;
+    color: green;
+    border-bottom: 2px solid black;
+    min-width: 160px;
+}
+
+.dropdown_content_ex a:last-child {
+    border-bottom: none;
+}
+
+/* transform & transition */
+.transform_ex {
+    background-color: red;
+    width: 200px;
+    height: 100px;
+    transition: width 2s linear 1s, transform 2s ease-in 0s;
+}
+
+.transform_ex:hover {
+    width: 400px;
+    transform: rotateX(180deg);
+}
+
+/* animation */
+@keyframes anim_ex {
+    0% {background-color: blue; top: 0px; left: 0px;}
+    25% {background-color: rgb(132, 0, 255); top: 0px; left: 50px;}
+    50% {background-color: rgb(238, 0, 255); top: 0px; left: 100px;}
+    75% {background-color: rgb(255, 0, 106); top: 0px; left: 150px;}
+    100% {background-color: rgb(255, 0, 0); top: 0px; left: 200px;}
+}
+
+.anim_es {
+    width: 200px;
+    height: 100px;
+    background-color: blue;
+    position: relative;
+    animation: anim_ex 6s linear 1s 1 normal forwards;
+}

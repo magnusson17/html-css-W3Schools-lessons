@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- <link rel="stylesheet" href="./assets/css/style.css"> -->
+    <link rel="stylesheet" href="./assets/css/style2.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <aside>
+        <div class="aside_div">
+            <h2>Menù</h2>
+
+            <a href="#formatting">
+                <h3>Formatting</h3>
+            </a>
+            <a href="#quotation">
+                <h3>Quotation</h3>
+            </a>
+            <a href="#link">
+                <h3>Link</h3>
+            </a>
+            <a href="#images">
+                <h3>Images</h3>
+            </a>
+            <a href="#iframe">
+                <h3>iframe</h3>
+            </a>
+            <a href="#table">
+                <h3>Table</h3>
+            </a>
+            <a href="#list">
+                <h3>List</h3>
+            </a>
+            <a href="#form">
+                <h3>Form</h3>
+            </a>
+
+            <hr>
+
+            <a href="#css">
+                <h3>CSS</h3>
+                <ul class="css_aside_title" style="list-style: none;">
+                    <li><a href="#line_throught">Line throught</a></li>
+                    <li><a href="#text_decoration_none">Text decoration per links</a></li>
+                    <li><a href="#box_shadow">Box shadow</a></li>
+                    <li><a href="#list_in_out">List (inside, outside)</a></li>
+                    <li><a href="#scroll">Scroll</a></li>
+                    <li><a href="#transf_transl">Transform: translate</a></li>
+                    <li><a href="#float">Float (con clearfix)</a></li>
+                    <li><a href="#selectors">Selectors</a></li>
+                    <li><a href="#pseudo_elements">Pseudo elements</a></li>
+                    <li><a href="#attribute_selector">Attribute selector</a></li>
+                    <li><a href="#navbar">Navbar</a></li>
+                    <li><a href="#transform_transition">Transform transition</a></li>
+                    <li><a href="#animation">Animation</a></li>
+                    <li><a href="#obj_fit">Object-fit</a></li>
+                </ul>
+            </a>
+        </div>
+    </aside>
+
+    <main>
+        <div class="card_container">
+            <div class="card_row">
+
+                <div class="card_col">
+                    <h2 class="card_title" id="formatting">Formatting</h2>
+
+                    <b>Bold, parola in grassetto</b><br>
+                    <strong>Strong, come bold ma indica anche che la frase è IMPORTANTE</strong><br>
+
+                    <i>italic, parole in corsivo</i><br>
+                    <em>emphatize, come italic ma indica che sono parole sulle quali bisogna enfatizare</em><br>
+
+                    <p>questo è <sup>superscripted text</sup></p><br>
+                    <p>questo è <sub>subscripted text</sub></p><br>
+
+                    <ins>inserted text</ins><br>
+                    <del>deleted text</del><br>
+                    <mark>marked/highlighted text</mark><br>
+                </div>
+
+                <div class="card_col">
+                    <h2 class="card_title" id="quotation">Quotation</h2>
+
+                    <blockquote cite="http://www.worldwildlife.org/who/index.html">
+                        Una lunga cit. For nearly 60 years, WWF has been protecting the future of nature. The world's leading conservation organization, WWF works in 100 countries and is supported by more than one million members in the United States and close to five million globally.
+                    </blockquote>
+
+                    <p>Questa è <q>una corta cit</q></p>
+
+                    <p>Abbreviation, The <abbr title="World Health Organization">WHO</abbr> was founded in 1948.</p>
+
+                    <address>
+                        Written by John Doe.<br>
+                        Visit us at:<br>
+                        Example.com<br>
+                        Box 564, Disneyland<br>
+                        USA
+                    </address>
+
+                    <bdo dir="rtl">This text will be written from right to left</bdo>
+                </div>
+
+                <div class="card_col">
+                    <h2 class="card_title" id="link">Link</h2>
+
+                    <div>
+                        <a href="https://www.google.com/search?q=google&rlz=1C1ONGR_itIT1007IT1007&oq=google&aqs=chrome..69i57j46i131i199i433i465i512j69i59j69i65l2j69i60j69i65j69i60.6030j0j7&sourceid=chrome&ie=UTF-8" target="_blank">con target="_blank" apro il link in una nuova pagina, questo è un riferimento assoluto</a>
+                    </div>
+
+                    <div>
+                        <a href="#ref_rel">questo è un riferimento relativo</a>
+                    </div>
+
+                    <div>
+                        <a href="mailto:someone@example.com">Send email</a>
+                    </div>
+
+                    <div>
+                        <a href="https://www.google.com/search?q=google&rlz=1C1ONGR_itIT1007IT1007&oq=google&aqs=chrome..69i57j46i131i199i433i465i512j69i59j69i65l2j69i60j69i65j69i60.6030j0j7&sourceid=chrome&ie=UTF-8" class="a_change_exemple">Provo a cambiare stile</a>
+                    </div>
+
+                    <div class="btn_base">
+                        <a href="">Clicca</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="card_row">
+
+                <div class="card_col bg_rand_img">
+                    <h2 class="card_title" id="images">Images</h2>
+
+                    <img src="https://picsum.photos/200" alt="random pic">
+
+                    <!-- Per rendere cliccabili elementi all'interno di una pic -->
+                    <!-- <img src="workplace.jpg" alt="Workplace" usemap="#workmap">
+
+                    <map name="workmap">
+                        <area shape="rect" coords="34,44,270,350" alt="Computer" href="computer.htm">
+                        <area shape="rect" coords="290,172,333,250" alt="Phone" href="phone.htm">
+                        <area shape="circle" coords="337,300,44" alt="Coffee" href="coffee.htm">
+                    </map> -->
+
+                    <!-- how different images for different screen sizes: -->
+                    <!-- <picture>
+                        <source media="(min-width: 650px)" srcset="img_food.jpg">
+                        <source media="(min-width: 465px)" srcset="img_car.jpg">
+                        <img src="img_girl.jpg">
+                    </picture> -->
+
+                </div>
+
+                <div class="card_col">
+                    <h2 class="card_title" id="iframes">iframes</h2>
+
+                    <!-- mostra una pagina web dentro una pagina web -->
+                    <iframe src="https://www.youtube.com/watch?v=BuZsACa95ZM" title="google" frameborder="0"></iframe>
+                </div>
+
+                <div class="card_col">
+                    <h2 class="card_title" id="table">Table</h2>
+
+                    <table>
+                        <caption>Table a caso</caption>
+
+                        <tr>
+                            <th>Nome</th>
+                            <th>Cognome</th>
+                            <th>Anno</th>
+                        </tr>
+
+                        <tr>
+                            <td>Paolino</td>
+                            <td>Paperino</td>
+                            <td>1890</td>
+                        </tr>
+
+                        <tr>
+                            <td>Ugo</td>
+                            <td>Foscolo</td>
+                            <td>1778</td>
+                        </tr>
+
+                        <tr>
+                            <td rowspan="2" colspan="3">uso colspan="3" per occupare 3 colonne</td>
+                        </tr>
+                    </table>
+
+                    <table style="width:100%"> 
+                        <caption>Altra table per provare colgroup</caption>
+
+                        <colgroup>
+                            <col span="2" style="background-color:red;">
+                            <col span="1" style="background-color:pink;">
+                        </colgroup>
+
+                        <tr>
+                            <td>col 1</td>
+                            <td>col 2</td>
+                            <td>col 3</td>
+                            <td>col 4</td>
+                            <td>col 5</td>
+                        </tr>
+                    </table>
+                </div>
+
+
+            </div>
+
+            <div class="card_row">
+                <div class="card_col">
+
+                    <h2 class="card_title" id="list">List</h2>
+
+                    <!-- 
+                        dl DESCRIPTION LIST
+                        dt TERM
+                        dd EACH TERM
+                     -->
+                    <dl>
+                        <dt>Como (description list: dl (titolo dt, list item dd))</dt>
+                        <dd>Fabregas</dd>
+                        <dd>Blanco</dd>
+                        <dd>Cerri</dd>
+                    </dl>
+                    
+                    <ul style="list-style-type:square;">
+                        <li>list-item-1</li>
+                        <li>list-item-2</li>
+                        <li>list-item-3</li>
+                    </ul>
+
+                    <ol type="A" start="2">
+                        <li>order 1</li>
+                        <li>order 2</li>
+                        <li>order 3</li>
+                    </ol>
+                </div>
+
+                <div class="card_col_2">
+
+                    <h2 class="card_title" id="form">Form</h2>
+
+                    <form action="" method="POST" target="_blank" autocomplete="on">
+                        <input type="radio" name="squadra" value="como">
+                        <label for="como">Como</label><br>
+
+                        <input type="radio" name="squadra" value="cagliari">
+                        <label for="cagliari">Cagliari</label><br>
+
+                        <input type="radio" name="squadra" value="genoa">
+                        <label for="genoa">Genoa</label><br>
+
+                        <button type="submit">go</button>
+                    </form>
+
+                    <form action="">
+                        <select name="prova" id="">
+                            <option value="o1">o1</option>
+                            <option value="o2" selected>o2</option>
+                            <option value="o3">o3</option>
+                        </select>
+                    </form>
+
+                    <textarea name="" id="" cols="30" rows="10">Scrivi in textarea</textarea>
+
+                    <form action="/action_page.php">
+                        <fieldset>
+                          <legend>tag fieldset, tag legend:</legend>
+                          <label for="fname">First name:</label><br>
+                          <input type="text" id="fname" name="fname" value="Ugo"><br>
+                          <label for="lname">Last name:</label><br>
+                          <input type="text" id="lname" name="lname" value="Foscolo"><br><br>
+                          <input type="submit" value="Submit">
+                        </fieldset>
+                    </form>
+
+                    <form action="">
+                        <label for="lista">datalist, per dare a input text una lista di option gia definite</label>
+                        <input list="lista">
+                        <datalist id="lista">
+                            <option value="lista1">lista1</option>
+                            <option value="lista2">lista2</option>
+                            <option value="lista3">lista3</option>
+                        </datalist>
+                    </form>
+
+                    <p>oninput: attributo di form, output: tag figlio di form + input type reset</p>
+                    <form action="" oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+                        0
+                        <input type="range" value="50" name="a">
+                        100 + 
+                        <input type="number" value="50" name="b">
+                        =
+                        <output name="x"></output>
+                        <input type="reset">
+                    </form>
+                </div>
+            </div>
+
+            <hr style="width:95%;">
+
+            <div class="card_row">
+                <div class="card_col_3">
+
+                    <h2 class="card_title" id="css">CSS</h2>
+
+                    <div class="bg_c"></div>
+                    <div class="bg_c_1"></div>
+                    <div class="bg_img"></div>
+                    <div class="outline_test"></div>
+
+                    <div>
+                        <h3 id="line_throught">Line throught</h3>
+                        <p style="text-decoration-line:line-through;">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat incidunt inventore molestiae tempore asperiores sapiente debitis recusandae soluta assumenda temporibus a, ut doloribus repellat odit deleniti repudiandae perferendis aspernatur voluptatem?</p>
+
+                        <hr>
+
+                        <h3 id="text_decoration_none">Text decoration per links</h3>
+                        <a href="#" class="txt_dec_test">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis officia tempora modi rem ducimus doloribus culpa placeat, porro aliquam assumenda exercitationem nihil reprehenderit voluptate recusandae nobis delectus ea cupiditate expedita.</a>
+
+                        <h3 id="box_shadow" style="text-shadow:2px 2px 5px red;">Box shadow</h3>
+
+                        <h3 id="list_in_out">List (inside, outside)</h3>
+                        <div>
+                            <h4>lista inside</h4>
+                            <ol style="list-style-position:inside; border:1px solid black;">
+                                <li style=" border:1px solid black;">lista 1</li>
+                                <li>lista 2</li>
+                                <li>lista 3</li>
+                                <li>lista 4</li>
+                            </ol>
+
+                            <h4>lista outside</h4>
+                            <ol style="list-style-position:outside; border:1px solid black;">
+                                <li style=" border:1px solid black;">lista 1</li>
+                                <li>lista 2</li>
+                                <li>lista 3</li>
+                                <li>lista 4</li>
+                            </ol>
+
+                            <ol type="A">
+                                <li>ciao</li>
+                                <li>hola</li>
+                            </ol>
+                        </div>
+
+                        <h3 id="scroll" style="text-transform:uppercase;">Scroll</h3>
+                        <div class="scroll_ex">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt cumque, architecto enim deserunt aperiam sequi quisquam tempore rem assumenda est quae doloribus totam? Saepe praesentium assumenda quia ad sapiente dignissimos! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa ducimus ratione accusantium quae corrupti eos facilis officia aut, at odio libero nihil vero omnis officiis deserunt harum repellat est assumenda. Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae culpa nobis id molestias temporibus? Beatae eveniet culpa velit quaerat, rerum consectetur odit aliquid vero soluta esse totam quas commodi iusto.</div>
+
+                        <h3 id="transf_transl">Transform: translate</h3>
+                        <div class="trans_transl_ex">
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus asperiores adipisci harum, nisi reprehenderit fuga sunt nemo cum quidem at aperiam sed officiis vel ullam et pariatur animi voluptates culpa.</p>
+                        </div>
+
+                        <h3 id="float">Float (con clearfix)</h3>
+                        <div class="clearfix">
+                            <p 
+                            style="width: 200px; 
+                            margin: 2px;
+                            border:1px solid red;
+                            float: left;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem ipsam porro itaque soluta repudiandae asperiores eaque veniam voluptas, commodi nulla! Alias culpa odit ea perferendis provident similique nisi ipsa corrupti.</p>
+
+                            <p 
+                            style="width: 200px; 
+                            margin: 2px;
+                            border:1px solid red;
+                            float: left;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi dolorum delectus laboriosam ex enim aperiam autem qui minima, sint, eveniet nisi, hic pariatur dolor consequuntur! Et qui in aliquid porro?</p>
+                        </div>
+
+                        <h3 id="selectors">Selectors</h3>
+                        <code style="font-size: 1.5em;">
+<pre>
+    ul li {
+        margin-top: 20px;
+    }
+
+    ul > li {
+        margin-top: 20px;
+    }
+
+    ul + li {
+        margin-top: 20px;
+    }
+
+    ul ~ li {
+        margin-top: 20px;
+    }
+</pre>
+                        </code>
+
+                        <h3 id="pseudo_elements">Pseudo elements</h3>
+                        <div>
+                            <p class="pseudo_c_ex">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro quaerat doloribus minima in ad autem nisi architecto, aperiam harum eligendi illo, ab ipsam tempora dolorum quia quod voluptates illum deserunt?</p>
+                        </div>
+
+                        <h3 id="attribute_selector">Attribute selector</h3>
+                        <div>
+                            <a class="attribut_sel_ex" href="#" target="_blank">Attribute Selectors</a>
+                        </div>
+                        <code style="font-size: 1.5em;">
+<pre>
+    a[target="_blank"] {
+        background-color: yellow;
+    }
+
+    a[target] {
+        background-color: yellow;
+    }
+</pre>
+                        </code>
+
+                        <h3 id="navbar">Navbar</h3>
+                        <nav>
+                            <ul class="nav_test clearfix">
+                                <li class="dropdown_ex">
+                                    <a href="#">Home</a>
+                                    <div class="dropdown_content_ex">
+                                        <a href="#">1</a>
+                                        <a href="#">2</a>
+                                        <a href="#">3</a>
+                                    </div>
+                                </li>
+                                <li><a href="#">Projects</a></li>
+                                <li><a href="#">About</a></li>
+                                <li><a href="#">Log in</a></li>
+                            </ul>
+
+                            <p style="background-color: red; width: 200px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis incidunt magni corporis vero reprehenderit exercitationem laudantium eaque inventore, dolorem dolorum excepturi quae repudiandae in nam aspernatur id deserunt consectetur doloremque? 
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident deleniti voluptatem, architecto id facilis quidem odit exercitationem voluptatum cupiditate, perspiciatis iusto! Nam, eaque assumenda praesentium natus delectus nostrum porro consequuntur.
+                            </p>
+                        </nav>
+
+                        <h3 id="transform_transition">Transform transition</h3>
+                        <div class="transform_ex"></div>
+
+                        <h3 id="animation">Animation</h3>
+                        <div class="anim_es"></div>
+
+                        <!-- Object fit & Object position -->
+                        <h3 id="obj_fit">Object-fit</h3>
+                        <div style="width:200px; height:250px;">
+                            <img 
+                            style="width:100%; 
+                            object-fit: cover;
+                            object-position: 80% 100%;" 
+                            src="https://picsum.photos/400/500" 
+                            alt="">
+                        </div>
+
+                        <h3 id="flex">Flex</h3>
+                        <div style="display:flex; width:100%; height: 200px;">
+                            <div 
+                            style="flex-grow: 1; 
+                            height: auto; 
+                            background-color: 
+                            black; 
+                            border: 1px solid white;"></div>
+                            <div 
+                            style="flex-grow: 2; 
+                            height: auto; 
+                            background-color: 
+                            black; 
+                            border: 1px solid white;"></div>
+                            <div 
+                            style="flex-grow: 1; 
+                            height: auto; 
+                            background-color: 
+                            black; 
+                            border: 1px solid white;"></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+</body>
+
+</html>
